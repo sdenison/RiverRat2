@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/bundles/googlemontserrat")
+    @Styles.Render("~/bundles/googlekaushan")
+    @Styles.Render("~/bundles/googledroid")
+    @Styles.Render("~/bundles/googleroboto")
+    @Styles.Render("~/Content/css")
+
+
+</head>
+<body id="page-top" class="index">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("River Rat!", "Index", "Home", new { area = "page-top" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                        @*@Html.ActionLink("SERVICES", "Index", "Home", null, null,  "services", null, new { @class="page-scroll", target="_self" })*@
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#tattoos">Tattoos</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#piercings">Piercings</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#location">Location</a>
+                    </li>
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+
+    @*<div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>*@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")   
+    @RenderSection("scripts", required: false)
+</body>
+</html>
